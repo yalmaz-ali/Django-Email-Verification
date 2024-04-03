@@ -79,9 +79,9 @@ def analyze(request):
                                      lastName=last_name, email=email)
                 print(first_name, last_name, email)
 
-            params = {"invalidEmailsList": invalid_emails}
+            params = {"invalidEmailsList": invalid_emails, 'show': True}
         else:
-            params = {'invalidEmailsList': ['No email entered']}
-        return render(request, 'analyze.html', params)
+            params = {'invalidEmailsList': ['No email entered'], 'show': False}
+        return render(request, 'home.html', params)
     else:
         return redirect('/')
