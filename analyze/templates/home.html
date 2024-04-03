@@ -8,10 +8,11 @@
 
 <body style="text-align: center; display: flex; justify-content: center;">
     <div>
-        <form action="/analyze/" method="get">
+        <form action="analyze/" method="post">
+            {% csrf_token %}
             <h1>Email verification</h1>
             <h4>Enter the first name, last name and email ( , or ; seperated)</h4>
-            <textarea id="text" name="text" style="width: 500px; height: 70px;"></textarea>
+            <textarea id="text" name="text" style="width: 500px; height: 100px;"></textarea>
             <br>
             <button style="margin-top: 10px;" type="submit">Submit</button>
         </form>
