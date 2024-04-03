@@ -32,7 +32,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET')
 # DEBUG = True
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
-ALLOWED_HOSTS = ['0.0.0.0']
+ALLOWED_HOSTS = ['yalmaz.pythonanywhere.com', '127.0.0.1']
 
 
 # Application definition
@@ -60,6 +60,7 @@ MIDDLEWARE = [
 ]
 
 CSRF_COOKIE_SECURE = True
+CSRF_TRUSTED_ORIGINS = ['https://yalmaz.pythonanywhere.com']
 
 ROOT_URLCONF = 'emailverification.urls'
 
